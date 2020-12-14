@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">ADVANCED MANAGEMENT DATABASE SYSTEM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">DATA-DICTIONARY STORAGE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project1.html">SQL</a>
+          </li>
+		   <li class="nav-item">
+            <a class="nav-link" href="select.html">SQL SELECT</a>
+          </li>
+		<li class="nav-item">
+            <a class="nav-link" href="distinct.html">SQL SELECT DISTINCT</a>
+          </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="where.html">SQL WHERE</a>
+          </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="and.html">SQL AND, OR, NOT</a>
+          </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="order.html">SQL ORDER BY</a>
+          </li>
+		<li class="nav-item">
+            <a class="nav-link" href="insert.html">SQL INSERT INTO</a>
+          </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="null.html">SQL NULL VALUES</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="update.html">SQL UPDATE</a>
+          </li>
+		  	<li class="nav-item">
+            <a class="nav-link" href="delete.html">SQL DELETE</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="join.html">SQL JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="inner.html">SQL INNER JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="left.html">SQL LEFT JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="right.html">SQL RIGHT JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="full.html">SQL FULL JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="self.html">SQL SELF JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="union.html">SQL UNION</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="group.html">SQL GROUP BY</a>
+          </li>	
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h2 class="masthead-subheading mb-0">SQL INNER JOIN Keyword</h2>
+      </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+      <section>
+    <h3 class="display-4"></h3>
+	<p>The INNER JOIN keyword selects records that have matching values in both tables.</p>
+		<p>The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.</p>
+<p>INNER JOIN Syntax</p>
+ <p style="color:DodgerBlue;">SELECT column_name(s)</p>
+ <p style="color:DodgerBlue;">FROM table1</p>
+ <p style="color:DodgerBlue;">INNER JOIN table2</p>
+  <p style="color:DodgerBlue;">ON table1.column_name = table2.column_name;</p>
+	    <img class="img-fluid" src="img/11.png" alt="">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+		  		  		              <p>Demo Database</p>
+<p>In this tutorial we will use the well-known Northwind sample database. </p>	
+<p>Below is a selection from the "Orders" table:</p>
+            <img class="img-fluid" src="img/12.png" alt="">
+			<p>And a selection from the "Customers" table:</p>
+			<img class="img-fluid" src="img/13.png" alt="">
+<br><br>
+   <h3 class="display-4">SQL INNER JOIN Example </h3>
+<p>The following SQL statement selects all orders with customer information:</p>
+ 
+Example
+ <p style="color:DodgerBlue;">SELECT Orders.OrderID, Customers.CustomerName</p>
+ <p style="color:DodgerBlue;">FROM Orders</p>
+ <p style="color:DodgerBlue;">INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID; </p>
+
+ <h3 class="display-4">JOIN Three Tables</h3>
+
+<p>The following SQL statement selects all orders with customer and shipper information:</p>
+
+Example
+ <p style="color:DodgerBlue;">SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName</p>
+ <p style="color:DodgerBlue;">FROM ((Orders</p>
+ <p style="color:DodgerBlue;">INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID) </p>
+  <p style="color:DodgerBlue;">INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);  </p>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">		
+          </div>
+        </div>
+		</div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Website Project 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

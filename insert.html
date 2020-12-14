@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">ADVANCED MANAGEMENT DATABASE SYSTEM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">DATA-DICTIONARY STORAGE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project1.html">SQL</a>
+          </li>
+		   <li class="nav-item">
+            <a class="nav-link" href="select.html">SQL SELECT</a>
+          </li>
+		<li class="nav-item">
+            <a class="nav-link" href="distinct.html">SQL SELECT DISTINCT</a>
+          </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="where.html">SQL WHERE</a>
+          </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="and.html">SQL AND, OR, NOT</a>
+          </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="order.html">SQL ORDER BY</a>
+          </li>
+		<li class="nav-item">
+            <a class="nav-link" href="insert.html">SQL INSERT INTO</a>
+          </li>
+		 <li class="nav-item">
+            <a class="nav-link" href="null.html">SQL NULL VALUES</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="update.html">SQL UPDATE</a>
+          </li>
+		  	<li class="nav-item">
+            <a class="nav-link" href="delete.html">SQL DELETE</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="join.html">SQL JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="inner.html">SQL INNER JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="left.html">SQL LEFT JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="right.html">SQL RIGHT JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="full.html">SQL FULL JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="self.html">SQL SELF JOINS</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="union.html">SQL UNION</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="group.html">SQL GROUP BY</a>
+          </li>	
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h2 class="masthead-subheading mb-0">SQL INSERT INTO Statement</h2>
+      </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+      <section>
+	<p>The INSERT INTO statement is used to insert new records in a table.</p>    
+	<h5 class="display-4">INSERT INTO Syntax</h5>
+	<p>It is possible to write the INSERT INTO statement in two ways.</p>
+<p>The first way specifies both the column names and the values to be inserted:</p>
+ <p style="color:DodgerBlue;">INSERT INTO table_name (column1, column2, column3, ...)</p>
+ <p style="color:DodgerBlue;">VALUES (value1, value2, value3, ...); </p>
+ <p>If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. The INSERT INTO syntax would be as follows:</p>
+ <p style="color:DodgerBlue;">INSERT INTO table_name</p>
+ <p style="color:DodgerBlue;">VALUES (value1, value2, value3, ...); </p>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+		  		              <p>Demo Database</p>
+<p>Below is a selection from the "Customers" table in the Northwind sample database: </p>	
+            <img class="img-fluid" src="img/2.png" alt="">
+          </div>
+		      <h3 class="display-4">INSERT INTO Example</h3>
+
+<p>The following SQL statement inserts a new record in the "Customers" table:</p>
+Example:
+ <p style="color:DodgerBlue;">INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)</p>
+ <p style="color:DodgerBlue;">VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');</p>
+<img class="img-fluid" src="img/3.png" alt="">
+
+    <h3 class="display-4">Insert Data Only in Specified Columns</h3>
+<P>It is also possible to only insert data in specific columns.</p>
+<p>The following SQL statement will insert a new record, but only insert data in the "CustomerName", "City", and "Country" columns (CustomerID will be updated automatically):</p>
+
+Example
+ <p style="color:DodgerBlue;">INSERT INTO Customers (CustomerName, City, Country)</p>
+ <p style="color:DodgerBlue;">VALUES ('Cardinal', 'Stavanger', 'Norway');</p>
+ 
+<p>The selection from the "Customers" table will now look like this:</p>
+<img class="img-fluid" src="img/3.png" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">		
+          </div>
+        </div>
+		</div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Website Project 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
