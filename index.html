@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">ADVANCED MANAGEMENT DATABASE SYSTEM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">DATA-DICTIONARY STORAGE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project1.html">SQL</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h2 class="masthead-subheading mb-0">Data-Dictionary Storage</h2>
+        <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">LEARN ABOUT SQL</a>
+      </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="img/images.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h3 class="display-4">Data-Dictionary Storage</h3>
+            <p>So far, we have considered only the representation of the relations themselves. 
+			A relational database system needs to maintain data about the relations, such as the schema of the relations. 
+			In general, such “data about data” are referred to as metadata. Relational schemas and other metadata about relations are stored in 
+			a structure called the data dictionary or system catalog. Among the types of information that the system must store are these: </p>			
+          </div>
+        </div>
+      </div>
+    </div>
+			<p>• Names of the relations</p>
+			<p>• Names of the attributes of each relation </p>
+			<p>• Domains and lengths of attributes </p>
+			<p> • Names of views defined on the database, and definitions of those views </p>
+			<p>• Integrity constraints (e.g., key constraints) In addition, many systems keep the following data on users of the system </p>
+			<p>• Names of users, the default schemas of the users, and passwords or other information to authenticate users</p>
+			<p> • Information about authorizations for each user Further, the database may store statistical and descriptive data about the relations 
+			and attributes, such as the number of tuples in each relation, or the number of distinct values for each attribute. T
+			he data dictionary may also note the storage organization (heap, sequential, hash, etc.) of relations, and the location where each relation is stored</p>
+			<p> • If relations are stored in operating system files, the dictionary would note the names of the file (or files) containing each relation. </p>
+			<p>• If the database stores all relations in a single file, the dictionary may note the blocks containing records of each relation in a data structure such as a linked list. I
+			n Chapter 14, in which we study indices, we shall see a need to store information about each index on each of the relations</p>
+			<p>• Name of the index 13.4 Data-Dictionary Storage 603 </p>
+			<p>• Name of the relation being indexed</p>
+			<p> • Attributes on which the index is defined</p>
+			<p> • Type of index formed </p>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5">
+		  Example:
+            <img class="img-fluid" src="img/image1.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5">
+<p>All this metadata information constitutes, in effect, a miniature database. Some database systems store such metadata by using special-purpose data structures and code. 
+It is generally preferable to store the data about the database as relations in the database itself. By using database relations to store system metadata, we simplify 
+the overall structure of the system and harness the full power of the database for fast access to system data. The exact choice of how to represent system metadata by 
+relations must be made by the system designers. We show the schema diagram of a toy data dictionary in Figure 13.12, storing part of the information mentioned above. 
+The schema is only illustrative; real implementations store far more information than what the figure shows. Read the manuals for whichever database you use to see what 
+system metadata it maintains. In the metadata representation shown, the attribute index attributes of the relation Index metadata is assumed to contain a list of one or 
+more attributes, which can be represented by a character string such as “dept name, building”. The Index metadata relation is thus not in first normal form; it can be normalized,
+ but the preceding representation is likely to be more efficient to access. The data dictionary is often stored in a nonnormalized form to achieve fast access</P>
+          </div>
+        </div>
+      </div>
+    </div>
+	<p>Whenever the database system needs to retrieve records from a relation, it must first consult the Relation metadata relation to find the location and storage 
+	organization of the relation, and then fetch records using this information. However, the storage organization and location of the Relation metadata relation 
+	itself must be recorded elsewhere (e.g., in the database code itself, or in a fixed location in the database), since we need this information to find the contents 
+	of Relation metadata. Since system metadata are frequently accessed, most databases read it from the database into in-memory data structures that can be accessed
+	very efficiently. This is done as part of the database startup, before the database starts processing any queries.</p>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Website Project 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
